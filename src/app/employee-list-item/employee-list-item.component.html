@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">
+        <fa-icon [icon]="fausershield"></fa-icon> {{ employee.name }} 
+        <span href="#" class="headrating btn btn-outline-danger"> <fa-icon [icon]="fastar"></fa-icon> {{employee.ratings[0].total}} </span>
+    </div>
+    <div class="card-body">
+        <p class="card-text">   
+            <img alt="placeholder" src="{{ employee.img }}"/>
+        </p>
+        <a href="#" class="show btn btn-outline-dark"> <fa-icon [icon]="faeye"></fa-icon> Show</a>
+        <a href="#" class="edit btn btn-danger"><fa-icon [icon]="faedit"></fa-icon> Edit</a>
+    </div>
+</div>
