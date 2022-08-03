@@ -1,2 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/scss/bootstrap";
+
+.navbar {
+    margin-bottom: 50px;
+  }
+  
+  .header {
+    font-size: 25px;
+  }
+  
+  @media(min-width:1200px) {
+    .header {
+      font-size: 30px;
+    }
+  }
+  
+  .card {
+    margin-right:5px;
+    margin-top: 50px;
+
+  }
+  
+  .edit {
+    margin-right: 5px;
+    float:left;
+  }
+  
+  .showList {
+    margin-right: 5px;
+  }
+
+  .headrating {
+    float:right;
+  }
+  
+  #grid, #list {
+    margin-right: 5px;
+  }
+  
+  @media(min-width:1200px) {
+    .edit {
+      margin-right: 5px;
+      float:right;
+    }
+    .show {
+      float:right;
+      margin-right: 5px;
+    }
+  }
+  
+  .stars {
+    margin-right: 5px;
+    float:right;
+  }
+  
+  .rating {
+    margin-bottom: 30px;
+  }
+  
+  .create {
+    float: right;
+  }
+  
+  .save, .cancel {
+    float:right;
+  }
+  
+  .save {
+    margin-right: 5px;
+  }
+  
+  .writeable {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .button-show {
+    margin-right: 5px;
+  }
+  
+  .star {
+    padding-right: 3px;
+  }
+  
+  #sort {
+    margin-right: 5px;
+  }
+  
+  #sort, #list, #grid {
+    float: right;
+  }
+  
+  h1 {
+    display: inline;
+  }
+  

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+       <div class="col-lg-12">
+           <h1 class="header">Employee Rating </h1>
+            <Button id="list" class="btn btn-outline-danger"><fa-icon [icon]="falist"></fa-icon> List</Button>
+            <Button class="active" id="grid" class="btn btn-outline-danger active"><fa-icon [icon]="fatablecells"></fa-icon> Grid</Button>
+       </div>
+    </div>
+    <div *ngIf="isGridView;then grid else list"></div>
+    <ng-template #grid>
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let employee of employees">
+                <div class="card">
+                    <div class="card-header">
+                        <fa-icon [icon]="fausershield"></fa-icon> {{ employee.name }} 
+                        <span href="#" class="headrating btn btn-outline-danger"> <fa-icon [icon]="fastar"></fa-icon> {{employee.ratings[0].total}} </span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">   
+                            <img alt="placeholder" src="{{ employee.img }}"/>
+                        </p>
+                        <a href="#" class="show btn btn-outline-dark"> <fa-icon [icon]="faeye"></fa-icon> Show</a>
+                        <a href="#" class="edit btn btn-danger"><fa-icon [icon]="faedit"></fa-icon> Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #list>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Rating</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees">
+                <th scope="row">{{ employee.id }}</th>
+                <td>{{ employee.ratings[0].total }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.departement }}</td>
+                <td>
+                    <a href="#" class="showList btn btn-outline-dark"> <fa-icon [icon]="faeye"></fa-icon> Show</a>
+                    <a href="#" class="editList btn btn-danger"><fa-icon [icon]="faedit"></fa-icon> Edit</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </ng-template>
+</div>    

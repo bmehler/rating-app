@@ -16,10 +16,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should have <h1> with "Hello, this is the RatingApp!"', () => {
-    const homeElement: HTMLElement = fixture.nativeElement;
-    const h1 = homeElement.querySelector('h1')!;
-    expect(h1.textContent).toEqual('Hello, this is the RatingApp!');
+  it('should create', () => {
+    expect(component).toBeTruthy();
   });
-
 });
