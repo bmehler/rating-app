@@ -22,8 +22,6 @@ export class EmployeeListItemComponent {
   faedit = faPenToSquare;
   fastar = faStar;
  
-  @Input() employee: Employee;
+  @Input() employee!: Employee;
 
 }
-
-
