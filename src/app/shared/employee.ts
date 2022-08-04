@@ -13,4 +13,4 @@ export class Employee {
         public departement: string,
         public ratings: Rating[]
     ) {}
-}
+} 
