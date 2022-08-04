@@ -9,7 +9,7 @@ import {  faTableCells,
           faStar
 } from '@fortawesome/free-solid-svg-icons';
 
-import { EmployeeService } from '../employee.service';
+import { EmployeeService } from '../shared/employee.service';
 
 @Component({
   selector: 'ra-employee-list',

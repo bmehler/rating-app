@@ -2,9 +2,9 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, map, catchError } from 'rxjs/operators';
-import { Employee } from './shared/employee';
-import { EmployeeRaw } from './shared/employee-raw';
-import { EmployeeFactory } from './shared/employee-factory';
+import { Employee } from './employee';
+import { EmployeeRaw } from './employee-raw';
+import { EmployeeFactory } from './employee-factory';
 
 @Injectable({
   providedIn: 'root'
