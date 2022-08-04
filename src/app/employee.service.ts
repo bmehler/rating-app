@@ -18,8 +18,8 @@ export class EmployeeService {
       .get<EmployeeRaw[]>(`${this.api}/employees`)
       .pipe(
         retry(3),
-        map(rawBooks => rawBooks
-          .map(rawBook => EmployeeFactory.fromObject(rawBook)),
+        map(rawEmployee => rawEmployee
+          .map(rawEmployee => EmployeeFactory.fromObject(rawEmployee)),
         ),
         catchError(this.errorHandler)
       );

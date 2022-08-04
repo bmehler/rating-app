@@ -9,7 +9,7 @@
         "age": 27,
         "position": "Webdeveloper",
         "departement": "Planning",
-        "ratings": {
+        "ratings": [{
           "quality": 20,
           "quantity": 20,
           "knowledge": 40,
@@ -21,7 +21,7 @@
           "performance": 70,
           "organization": 50,
           "total": 52
-        }
+        }]
       },
       {
         "id": 2,
@@ -32,7 +32,7 @@
         "age": 28,
         "position": "Webdeveloper",
         "departement": "Marketing",
-        "ratings": {
+        "ratings": [{
           "quality": 100,
           "quantity": 90,
           "knowledge": 40,
@@ -44,7 +44,7 @@
           "performance": 80,
           "organization": 30,
           "total": 76
-        }
+        }]
       },
       {
         "id": 3,
@@ -55,7 +55,7 @@
         "age": 29,
         "position": "Webdeveloper",
         "departement": "Accounting",
-        "ratings": {
+        "ratings": [{
           "quality": 90,
           "quantity": 20,
           "knowledge": 40,
@@ -67,7 +67,7 @@
           "performance": 70,
           "organization": 10,
           "total": 55
-        }
+        }]
       },
       {
         "id": 4,
@@ -78,7 +78,7 @@
         "age": 30,
         "position": "Webdeveloper",
         "departement": "Accounting",
-        "ratings": {
+        "ratings": [{
           "quality": 10,
           "quantity": 20,
           "knowledge": 40,
@@ -90,7 +90,7 @@
           "performance": 70,
           "organization": 10,
           "total": 47
-        }
+        }]
       },
       {
         "id": 5,
@@ -101,7 +101,7 @@
         "age": 30,
         "position": "Webdeveloper",
         "departement": "Marketing",
-        "ratings": {
+        "ratings": [{
           "quality": 10,
           "quantity": 30,
           "knowledge": 40,
@@ -113,7 +113,7 @@
           "performance": 70,
           "organization": 10,
           "total": 48
-        }
+        }]
       },
       {
         "id": 6,
@@ -124,7 +124,7 @@
         "age": 30,
         "position": "Webdeveloper",
         "departement": "Strategy",
-        "ratings": {
+        "ratings": [{
           "quality": 10,
           "quantity": 20,
           "knowledge": 10,
@@ -136,7 +136,7 @@
           "performance": 10,
           "organization": 10,
           "total": 15
-        }
+        }]
       },
       {
         "id": 7,
@@ -147,7 +147,7 @@
         "age": "43",
         "position": "Webdeveloper",
         "departement": "Netlogix Gmbh",
-        "ratings": {
+        "ratings": [{
           "quality": 10,
           "quantity": 10,
           "knowledge": 10,
@@ -159,7 +159,7 @@
           "performance": 10,
           "organization": 100,
           "total": 19
-        }
+        }]
       }
     ]
   }
