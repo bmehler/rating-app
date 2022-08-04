@@ -2,8 +2,8 @@
     <div class="row">
        <div class="col-lg-12">
            <h1 class="header">Employee Rating </h1>
-            <Button id="list" class="btn btn-outline-danger"><fa-icon [icon]="falist"></fa-icon> List</Button>
-            <Button class="active" id="grid" class="btn btn-outline-danger active"><fa-icon [icon]="fatablecells"></fa-icon> Grid</Button>
+            <Button id="list" [class.active]= "!isGridView" class="btn btn-outline-danger" (click)="showGrid()"><fa-icon [icon]="falist"></fa-icon> List</Button>
+            <Button id="grid" [class.active] = "isGridView" (click)="showList()" class="btn btn-outline-danger"><fa-icon [icon]="fatablecells"></fa-icon> Grid</Button>
        </div>
     </div>
     <div *ngIf="isGridView;then grid else list"></div>

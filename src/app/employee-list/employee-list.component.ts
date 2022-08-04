@@ -65,4 +65,12 @@ export class EmployeeListComponent implements OnInit {
       )
     ]
   }
+
+  showList() {
+    this.isGridView = true;
+  }
+
+  showGrid() {
+    this.isGridView = false;
+  }
 }
