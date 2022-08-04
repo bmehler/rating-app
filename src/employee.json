@@ -1,0 +1,165 @@
+{
+    "employees": [
+      {
+        "id": 1,
+        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "name": "Mike Meier",
+        "city": "Munich",
+        "gender": "Male",
+        "age": 27,
+        "position": "Webdeveloper",
+        "departement": "Planning",
+        "ratings": {
+          "quality": 20,
+          "quantity": 20,
+          "knowledge": 40,
+          "initiative": 10,
+          "communication": 90,
+          "team": 80,
+          "learning": 50,
+          "motivation": 90,
+          "performance": 70,
+          "organization": 50,
+          "total": 52
+        }
+      },
+      {
+        "id": 2,
+        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "name": "Steve Summer",
+        "city": "Frankfurt",
+        "gender": "Male",
+        "age": 28,
+        "position": "Webdeveloper",
+        "departement": "Marketing",
+        "ratings": {
+          "quality": 100,
+          "quantity": 90,
+          "knowledge": 40,
+          "initiative": 70,
+          "communication": 90,
+          "team": 80,
+          "learning": 90,
+          "motivation": 90,
+          "performance": 80,
+          "organization": 30,
+          "total": 76
+        }
+      },
+      {
+        "id": 3,
+        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "name": "Bruce Buttler",
+        "city": "Hamburg",
+        "gender": "Male",
+        "age": 29,
+        "position": "Webdeveloper",
+        "departement": "Accounting",
+        "ratings": {
+          "quality": 90,
+          "quantity": 20,
+          "knowledge": 40,
+          "initiative": 10,
+          "communication": 90,
+          "team": 80,
+          "learning": 50,
+          "motivation": 90,
+          "performance": 70,
+          "organization": 10,
+          "total": 55
+        }
+      },
+      {
+        "id": 4,
+        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "name": "Daisy Dougles",
+        "city": "New York",
+        "gender": "Female",
+        "age": 30,
+        "position": "Webdeveloper",
+        "departement": "Accounting",
+        "ratings": {
+          "quality": 10,
+          "quantity": 20,
+          "knowledge": 40,
+          "initiative": 10,
+          "communication": 90,
+          "team": 80,
+          "learning": 50,
+          "motivation": 90,
+          "performance": 70,
+          "organization": 10,
+          "total": 47
+        }
+      },
+      {
+        "id": 5,
+        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "name": "Molly Michell",
+        "city": "Michigan",
+        "gender": "Female",
+        "age": 30,
+        "position": "Webdeveloper",
+        "departement": "Marketing",
+        "ratings": {
+          "quality": 10,
+          "quantity": 30,
+          "knowledge": 40,
+          "initiative": 10,
+          "communication": 90,
+          "team": 80,
+          "learning": 50,
+          "motivation": 90,
+          "performance": 70,
+          "organization": 10,
+          "total": 48
+        }
+      },
+      {
+        "id": 6,
+        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "name": "Elizabeth Eager",
+        "city": "San Francisco",
+        "gender": "Female",
+        "age": 30,
+        "position": "Webdeveloper",
+        "departement": "Strategy",
+        "ratings": {
+          "quality": 10,
+          "quantity": 20,
+          "knowledge": 10,
+          "initiative": 10,
+          "communication": 10,
+          "team": 20,
+          "learning": 20,
+          "motivation": 30,
+          "performance": 10,
+          "organization": 10,
+          "total": 15
+        }
+      },
+      {
+        "id": 7,
+        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "name": "Beatus Mehler",
+        "city": "New York",
+        "gender": "Male",
+        "age": "43",
+        "position": "Webdeveloper",
+        "departement": "Netlogix Gmbh",
+        "ratings": {
+          "quality": 10,
+          "quantity": 10,
+          "knowledge": 10,
+          "initiative": 10,
+          "communication": 10,
+          "team": 10,
+          "learning": 10,
+          "motivation": 10,
+          "performance": 10,
+          "organization": 100,
+          "total": 19
+        }
+      }
+    ]
+  }

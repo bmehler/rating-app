@@ -9,6 +9,8 @@ import {  faTableCells,
           faStar
 } from '@fortawesome/free-solid-svg-icons';
 
+import { EmployeeService } from '../employee.service';
+
 @Component({
   selector: 'ra-employee-list',
   templateUrl: './employee-list.component.html',
@@ -16,6 +18,8 @@ import {  faTableCells,
   ]
 })
 export class EmployeeListComponent implements OnInit {
+
+  constructor(private employeeService: EmployeeService) {}
 
   employees: Employee[] = [];
   
@@ -29,41 +33,12 @@ export class EmployeeListComponent implements OnInit {
   isGridView: boolean = true;
 
   ngOnInit(): void {
-    this.employees = [
-      new Employee(
-        1,
-        'https://via.placeholder.com/375x250?text=350x250+MPU',
-        'Mike Meier',
-        'München',
-        'male',
-        27,
-        'Projectmanager',
-        'IT Systems',
-        [new Rating(50,20,30,40,50,60,70,80,30,45,0)]
-      ),
-      new Employee(
-        2,
-        'https://via.placeholder.com/375x250?text=350x250+MPU',
-        'Mike Meier',
-        'München',
-        'male',
-        27,
-        'Projectmanager',
-        'IT Systems',
-        [new Rating(50,20,30,40,50,60,70,80,30,45,78)]
-      ),
-      new Employee(
-        3,
-        'https://via.placeholder.com/375x250?text=350x250+MPU',
-        'Mike Meier',
-        'München',
-        'male',
-        27,
-        'Projectmanager',
-        'IT Systems',
-        [new Rating(50,20,30,40,50,60,70,80,30,45,45)]
-      )
-    ]
+    this.getAll()
+  }
+
+  getAll(): void {
+    this.employeeService.getAll()
+        .subscribe(employees => this.employees = employees);
   }
 
   showList() {
