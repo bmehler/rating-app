@@ -4,9 +4,10 @@
            <h1 class="header">Employee Rating </h1>
             <Button id="list" [class.active]= "!isGridView" class="btn btn-outline-danger" (click)="showGrid()"><fa-icon [icon]="falist"></fa-icon> List</Button>
             <Button id="grid" [class.active] = "isGridView" (click)="showList()" class="btn btn-outline-danger"><fa-icon [icon]="fatablecells"></fa-icon> Grid</Button>
-       </div>
+            <ra-sorting-list (sortingEvent)="getCurrrentSorting($event)"></ra-sorting-list>
+        </div>
     </div>
-    <div *ngIf="isGridView;then grid else list"></div>
+    <div *ngIf="isGridView;then grid else list"></div> 
     <ng-template #grid>
         <div class="row">
             <ra-employee-list-item class="col-lg-4 col-md-6 col-sm-12" *ngFor="let e of employees"
@@ -27,7 +28,7 @@
             <tbody>
               <tr *ngFor="let employee of employees">
                 <th scope="row">{{ employee.id }}</th>
-                <td></td>
+                <td> {{ employee.ratings[0].total }}</td>
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.departement }}</td>
                 <td>

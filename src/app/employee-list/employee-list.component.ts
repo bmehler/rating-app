@@ -41,6 +41,16 @@ export class EmployeeListComponent implements OnInit {
         .subscribe(employees => this.employees = employees);
   }
 
+  getAllAsc(): void {
+    this.employeeService.getAllAsc()
+        .subscribe(employees => this.employees = employees);
+  }
+
+  getAllDesc(): void {
+    this.employeeService.getAllDesc()
+        .subscribe(employees => this.employees = employees);
+  }
+
   showList() {
     this.isGridView = true;
   }
@@ -48,4 +58,15 @@ export class EmployeeListComponent implements OnInit {
   showGrid() {
     this.isGridView = false;
   }
+
+  getCurrrentSorting(sort: any) {
+    //console.log('sorting', sort);
+    if(sort === '2') {
+      this.getAllDesc();
+      //console.log('1', sort);
+    } else {
+      this.getAllAsc();
+      //console.log('2', sort);
+    }
+  } 
 }

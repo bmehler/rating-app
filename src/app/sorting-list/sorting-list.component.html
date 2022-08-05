@@ -1,0 +1,8 @@
+<select (change)="changeSorting($event)" name="sort" class="form-select form-select-sorting">
+    <option
+      *ngFor="let opt of sortingOptions ;let indexOfelement=index;"
+      [value]="indexOfelement + 1"
+    >
+      {{ opt }}
+    </option>
+</select>

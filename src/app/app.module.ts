@@ -9,6 +9,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EmployeeListItemComponent } from './employee-list-item/employee-list-item.component';
 import { EmployeeCreateComponent } from './employee-create/employee-create.component';
+import { SortingListComponent } from './sorting-list/sorting-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EmployeeCreateComponent } from './employee-create/employee-create.compo
     TopNavigationComponent,
     EmployeeListComponent,
     EmployeeListItemComponent,
-    EmployeeCreateComponent
+    EmployeeCreateComponent,
+    SortingListComponent
   ],
   imports: [
     BrowserModule,

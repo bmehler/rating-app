@@ -19,7 +19,31 @@ export class EmployeeService {
       .pipe(
         retry(3),
         map(rawEmployee => rawEmployee
-          .map(rawEmployee => EmployeeFactory.fromObject(rawEmployee)),
+          .map(rawEmployee => EmployeeFactory.fromObject(rawEmployee)).sort((a,b) => a.ratings[0].total - b.ratings[0].total),
+        ),
+        catchError(this.errorHandler)
+      );
+  }
+
+  getAllAsc(): Observable<Array<Employee>> {
+    return this.http
+      .get<EmployeeRaw[]>(`${this.api}/employees`)
+      .pipe(
+        retry(3),
+        map(rawEmployee => rawEmployee
+          .map(rawEmployee => EmployeeFactory.fromObject(rawEmployee)).sort((a,b) => a.ratings[0].total - b.ratings[0].total),
+        ),
+        catchError(this.errorHandler)
+      );
+  }
+
+  getAllDesc(): Observable<Array<Employee>> {
+    return this.http
+      .get<EmployeeRaw[]>(`${this.api}/employees`)
+      .pipe(
+        retry(3),
+        map(rawEmployee => rawEmployee
+          .map(rawEmployee => EmployeeFactory.fromObject(rawEmployee)).sort((a,b) => b.ratings[0].total - a.ratings[0].total),
         ),
         catchError(this.errorHandler)
       );

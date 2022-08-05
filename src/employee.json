@@ -2,7 +2,7 @@
     "employees": [
       {
         "id": 1,
-        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "img": "https://picsum.photos/375?grayscale",
         "name": "Mike Meier",
         "city": "Munich",
         "gender": "Male",
@@ -25,7 +25,7 @@
       },
       {
         "id": 2,
-        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "img": "https://picsum.photos/375",
         "name": "Steve Summer",
         "city": "Frankfurt",
         "gender": "Male",
@@ -48,7 +48,7 @@
       },
       {
         "id": 3,
-        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "img": "https://picsum.photos/375?grayscale",
         "name": "Bruce Buttler",
         "city": "Hamburg",
         "gender": "Male",
@@ -71,7 +71,7 @@
       },
       {
         "id": 4,
-        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "img": "https://picsum.photos/375",
         "name": "Daisy Dougles",
         "city": "New York",
         "gender": "Female",
@@ -94,7 +94,7 @@
       },
       {
         "id": 5,
-        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "img": "https://picsum.photos/375?grayscale",
         "name": "Molly Michell",
         "city": "Michigan",
         "gender": "Female",
@@ -117,7 +117,7 @@
       },
       {
         "id": 6,
-        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "img": "https://picsum.photos/375",
         "name": "Elizabeth Eager",
         "city": "San Francisco",
         "gender": "Female",
@@ -140,7 +140,7 @@
       },
       {
         "id": 7,
-        "img": "https://via.placeholder.com/375x250?text=350x250+MPU",
+        "img": "https://picsum.photos/375?grayscale",
         "name": "Beatus Mehler",
         "city": "New York",
         "gender": "Male",
