@@ -11,7 +11,7 @@
     <ng-template #grid>
         <div class="row">
             <ra-employee-list-item class="col-lg-4 col-md-6 col-sm-12" *ngFor="let e of employees"
-            [employee]="e"></ra-employee-list-item>
+            [employee]="e" [routerLink]="e.name"></ra-employee-list-item>
         </div>
     </ng-template>
     <ng-template #list>
@@ -32,7 +32,7 @@
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.departement }}</td>
                 <td>
-                    <a href="#" class="showList btn btn-outline-dark"> <fa-icon [icon]="faeye"></fa-icon> Show</a>
+                    <a [routerLink]="['../show', employee.id]" class="showList btn btn-outline-dark"> <fa-icon [icon]="faeye"></fa-icon> Show</a>
                     <a href="#" class="editList btn btn-danger"><fa-icon [icon]="faedit"></fa-icon> Edit</a>
                 </td>
               </tr>

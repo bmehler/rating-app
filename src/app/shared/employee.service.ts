@@ -49,6 +49,16 @@ export class EmployeeService {
       );
   }
 
+  getSingle(id: number): Observable<Employee> {
+    return this.http
+      .get<EmployeeRaw>(`${this.api}/employees/${id}`)
+      .pipe(
+        retry(3),
+        map(rawEmployee => EmployeeFactory.fromObject(rawEmployee)),
+        catchError(this.errorHandler)
+      );
+  }
+
   private errorHandler(error: Error | any): Observable<any> {
     return throwError(() => new Error(error))
   }
