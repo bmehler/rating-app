@@ -1,0 +1,15 @@
+<span [ngSwitch]="stars()">
+    <span *ngSwitchCase="'great'">
+        <fa-icon [icon]="fastar"></fa-icon>
+        <fa-icon [icon]="fastar"></fa-icon>
+        <fa-icon [icon]="fastar"></fa-icon>
+    </span>
+    <span *ngSwitchCase="'better'">
+        <fa-icon [icon]="fastar"></fa-icon>
+        <fa-icon [icon]="fastar"></fa-icon>
+    </span>
+    <span *ngSwitchCase="'worse'">
+        <fa-icon [icon]="fastar"></fa-icon>
+    </span>
+    <span *ngSwitchDefault>Error</span>
+</span>

@@ -13,6 +13,7 @@ import { SortingListComponent } from './sorting-list/sorting-list.component';
 import { EmployeeShowComponent } from './employee-show/employee-show.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
 import { NotificationComponent } from './notification/notification.component';
+import { StarsComponent } from './stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NotificationComponent } from './notification/notification.component';
     EmployeeShowComponent,
     ProgressbarComponent,
     NotificationComponent,
+    StarsComponent,
   ],
   imports: [
     BrowserModule,

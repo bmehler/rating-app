@@ -28,7 +28,7 @@
             <tbody>
               <tr *ngFor="let employee of employees">
                 <th scope="row">{{ employee.id }}</th>
-                <td> {{ employee.ratings[0].total }}</td>
+                <td> {{ employee.ratings[0].total }} <ra-stars [employee]="employee"></ra-stars></td>
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.departement }}</td>
                 <td>

@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-header">
         <fa-icon [icon]="fausershield"></fa-icon> {{ employee.name }} 
-        <span href="#" class="headrating btn btn-outline-danger"> <fa-icon [icon]="fastar"></fa-icon> {{ employee.ratings[0].total}} </span>
+        <span href="#" class="headrating btn btn-outline-danger"> <ra-stars [employee]="employee"></ra-stars> {{ employee.ratings[0].total}} </span>
     </div>
     <div class="card-body">
         <p class="card-text">   
