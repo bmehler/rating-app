@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Employee } from '../shared/employee';
+import { Employee } from '../../shared/employee';
 
 @Component({
   selector: 'ra-progressbar',
