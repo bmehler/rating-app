@@ -11,6 +11,8 @@ import { EmployeeListItemComponent } from './employee-list-item/employee-list-it
 import { EmployeeCreateComponent } from './employee-create/employee-create.component';
 import { SortingListComponent } from './sorting-list/sorting-list.component';
 import { EmployeeShowComponent } from './employee-show/employee-show.component';
+import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { EmployeeShowComponent } from './employee-show/employee-show.component';
     EmployeeListItemComponent,
     EmployeeCreateComponent,
     SortingListComponent,
-    EmployeeShowComponent
+    EmployeeShowComponent,
+    ProgressbarComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,

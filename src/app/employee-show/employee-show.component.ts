@@ -16,7 +16,7 @@ import { faChartLine
 })
 export class EmployeeShowComponent implements OnInit {
 
-  employee: Employee = EmployeeFactory.empty();
+  employee!: Employee;
 
   fachartline = faChartLine;
 
@@ -31,17 +31,4 @@ export class EmployeeShowComponent implements OnInit {
     this.ra.getSingle(params['id'])
     .subscribe(e => this.employee = e);
   }
-
-  getClass(rating:number) {
-    let classList='';
-    if(rating <= 30){
-      classList = 'progress-bar progress-bar-striped bg-danger'; 
-    }else if (rating > 30 && rating < 75){
-      classList = 'progress-bar progress-bar-striped bg-warning';
-    }else if(rating > 75){
-      classList = 'progress-bar progress-bar-striped bg-success';
-    }
-    return classList;
-  }
-
 }

@@ -1,0 +1,12 @@
+<div class="card" *ngFor="let r of rates">
+    <div class="card-header">
+      {{r.title}}
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="progress">
+                <div [ngClass]="getClass(r.value)" role="progressbar" [ngStyle]="{'width': r.value + '%' }" attr.aria-valuenow="{{ r.value }}" aria-valuemin="0" aria-valuemax="100">{{ r.value }}%</div>
+            </div>
+        </li>
+    </ul>
+</div>
