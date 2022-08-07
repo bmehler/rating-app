@@ -59,6 +59,14 @@ export class EmployeeService {
       );
   }
 
+  create(employee: Employee): Observable<any> {
+    return this.http
+      .post(`${this.api}/employees`, employee, { responseType: 'text' })
+      .pipe(
+        catchError(this.errorHandler)
+      );
+  }
+
   remove(id: number): Observable<any> {
     return this.http
       .delete(`${this.api}/employees/${id}`, { responseType: 'text' })
