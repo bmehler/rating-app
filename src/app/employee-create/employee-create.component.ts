@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 import { Employee } from '../shared/employee';
 import { EmployeeFactory } from '../shared/employee-factory';
@@ -12,13 +13,18 @@ import { EmployeeService } from '../shared/employee.service';
   styles: [
   ]
 })
-export class EmployeeCreateComponent  {
+export class EmployeeCreateComponent implements OnInit  {
 
+  @ViewChild('createForm', { read: NgForm }) form!: NgForm;
+  
   employee = EmployeeFactory.empty();
   
   ngOnInit() {
     this.employee.img = "https://picsum.photos/375?grayscale";
+    this.employee.name ='';
+    this.employee.city = '';
     this.employee.gender = "male";
+    this.employee.age = 35;
     this.employee.ratings[0].quality = 10;
     this.employee.ratings[0].quantity = 10;
     this.employee.ratings[0].knowledge  = 10;
