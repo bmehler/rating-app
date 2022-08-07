@@ -59,6 +59,11 @@ export class EmployeeService {
       );
   }
 
+  remove(id: number): Observable<any> {
+    return this.http
+      .delete(`${this.api}/employees/${id}`, { responseType: 'text' })
+  }
+
   private errorHandler(error: Error | any): Observable<any> {
     return throwError(() => new Error(error))
   }

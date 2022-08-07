@@ -5,7 +5,7 @@ import { Employee } from '../shared/employee';
 import { EmployeeFactory } from '../shared/employee-factory';
 import { EmployeeService } from '../shared/employee.service';
 
-import { faChartLine
+import { faChartLine, faTrashCan
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -19,6 +19,7 @@ export class EmployeeShowComponent implements OnInit {
   employee!: Employee;
 
   fachartline = faChartLine;
+  fatrash = faTrashCan;
 
   constructor(
     private ra: EmployeeService,
@@ -30,5 +31,10 @@ export class EmployeeShowComponent implements OnInit {
     const params = this.route.snapshot.params;
     this.ra.getSingle(params['id'])
     .subscribe(e => this.employee = e);
+  }
+
+  removeEmployee() {
+    this.ra.remove(this.employee.id)
+      .subscribe(res => this.router.navigate(['../']));
   }
 }
