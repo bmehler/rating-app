@@ -61,7 +61,7 @@ export class EmployeeListComponent implements OnInit {
 
   getCurrrentSorting(sort: any) {
     //console.log('sorting', sort);
-    if(sort === '2') {
+    if(sort === '1') {
       this.getAllDesc();
       //console.log('1', sort);
     } else {

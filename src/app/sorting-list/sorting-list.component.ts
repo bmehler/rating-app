@@ -10,12 +10,10 @@ export class SortingListComponent {
 
   constructor() {}
 
-  sortingOptions = ['aufsteigend', 'absteigend'];
+  sortingOptions = ['absteigend', 'aufsteigend'];
   selectedOption = 1;
 
   @Output() sortingEvent = new EventEmitter<string>();
-
-  Option: string[] = ['aufsteigend', 'absteigend'];
 
   changeSorting(e: any) {
     this.sortingEvent.emit(e.target.value);
