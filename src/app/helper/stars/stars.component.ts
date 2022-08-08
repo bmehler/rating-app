@@ -16,7 +16,7 @@ export class StarsComponent {
 
   fastar = faStar;
 
-  private total: number = 0;
+  public total: number = 0;
   public average: number = 0;
 
   getTotal(){

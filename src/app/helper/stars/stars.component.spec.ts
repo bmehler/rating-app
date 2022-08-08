@@ -1,5 +1,6 @@
+import { createPlatform } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { StarsComponent } from './stars.component';
 
 describe('StarsComponent', () => {
@@ -8,16 +9,21 @@ describe('StarsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StarsComponent ]
+      providers:[
+        StarsComponent
+      ]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(StarsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create', ()=> {
+    component.ngOnInit();
+    expect(component.total).toContain(75);
   });
 });
+ 
