@@ -1,0 +1,231 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Edit Employee</h1>
+        </div>
+    </div>
+    <div class="row form-top">
+        <div class="col-lg-12">
+            <h3 id="subheader">Employee Details</h3>
+            <form #editForm="ngForm" (ngSubmit)="submitForm()" novalidate>
+                <div class="mb-3">
+                    <label for="img" class="form-label">Image</label>
+                    <input name="img" type="text" class="form-control form-control-lg" id="img" placeholder="Url" required #img="ngModel" [(ngModel)]="employee.img">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input name="name" type="text" class="form-control form-control-lg" id="name" placeholder="Name" required minlength="5" #name="ngModel" [(ngModel)]="employee.name">
+                </div>
+                <div *ngIf="!name?.valid && (name?.dirty || name?.touched)" class="alert alert-danger">
+                    <div *ngIf="name.errors?.['required']">
+                        Name is required.
+                      </div>
+                      <div *ngIf="name.errors?.['minlength']">
+                        Name must be at least 5 characters long.
+                      </div>
+                 </div>
+                <div class="mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input name="city" type="text"  class="form-control form-control-lg" id="city" placeholder="City" required minlength="3" #city="ngModel" [(ngModel)]="employee.city">
+                </div>
+                <div *ngIf="!city?.valid && (city?.dirty || city?.touched)" class="alert alert-danger">
+                    <div *ngIf="city.errors?.['required']">
+                        City is required.
+                      </div>
+                      <div *ngIf="city.errors?.['minlength']">
+                        City must be at least 3 characters long.
+                      </div>
+                 </div>
+                <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select name="gender" class="form-select form-select-lg" aria-label="gender" [(ngModel)]="employee.gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input name="age" type="text"  class="form-control form-control-lg" id="age" placeholder="Age" required minlength="1" [(ngModel)]="employee.age">
+                </div>
+                <div class="mb-3">
+                    <label for="position" class="form-label">Position</label>
+                    <input name="position" type="text"  class="form-control form-control-lg" id="position" placeholder="Position" required minlength="5" #position="ngModel" [(ngModel)]="employee.position">
+                </div>
+                <div *ngIf="!position ?.valid && (position ?.dirty || position ?.touched)" class="alert alert-danger">
+                    <div *ngIf="position .errors?.['required']">
+                        Position  is required.
+                      </div>
+                      <div *ngIf="position .errors?.['minlength']">
+                        Position  must be at least 5 characters long.
+                      </div>
+                 </div>
+                <div class="mb-3">
+                    <label for="departement" class="form-label">Departement</label>
+                    <input name="departement" type="text"  class="form-control form-control-lg" id="departement" placeholder="Departement" required minlength="2" #departement="ngModel" [(ngModel)]="employee.departement">
+                </div>
+                <div *ngIf="!departement ?.valid && (departement ?.dirty || departement ?.touched)" class="alert alert-danger">
+                    <div *ngIf="departement .errors?.['required']">
+                        Departement  is required.
+                      </div>
+                      <div *ngIf="departement .errors?.['minlength']">
+                        Departement  must be at least 2 characters long.
+                      </div>
+                 </div>
+                <h3 id="subheader">Rating Details</h3>
+                <div class="mb-3">
+                    <label class="quality">Qualitiy</label>
+                    <select name="quality" class="form-select form-select-lg" aria-label="quality" [(ngModel)]="this.employee.ratings[0].quality">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="quantity">Quantity</label>
+                    <select name="quantity" class="form-select form-select-lg" aria-label="quantity" [(ngModel)]="this.employee.ratings[0].quantity">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Knowledge</label>
+                    <select name="knowledge" class="form-select form-select-lg" aria-label="knowledge" [(ngModel)]="this.employee.ratings[0].knowledge">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Initiative</label>
+                    <select name="initiative" class="form-select form-select-lg" aria-label="initiative" [(ngModel)]="this.employee.ratings[0].initiative">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Communication</label>
+                    <select name="communication"class="form-select form-select-lg" aria-label="communication" [(ngModel)]="this.employee.ratings[0].communication">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Team</label>
+                    <select name="team" class="form-select form-select-lg" aria-label="team" [(ngModel)]="this.employee.ratings[0].team">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Learning</label>
+                    <select name="learning" class="form-select form-select-lg" aria-label="learning" [(ngModel)]="this.employee.ratings[0].learning">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Motivation</label>
+                    <select name="motivation" class="form-select form-select-lg" aria-label="motivation" [(ngModel)]="this.employee.ratings[0].motivation">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Performance</label>
+                    <select name="performance" class="form-select form-select-lg" aria-label="performance" [(ngModel)]="this.employee.ratings[0].performance">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Organization</label>
+                    <select name="organization" class="form-select form-select-lg" aria-label="organization" [(ngModel)]="this.employee.ratings[0].organization">
+                        <option value="10" selected="selected">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="float-end btn btn-lg btn-outline-danger" [disabled]="!editForm.valid">Edit</button>
+                </div>    
+            </form>
+        </div>
+    </div>
+</div>

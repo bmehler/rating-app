@@ -4,7 +4,7 @@
             <div>
                 <h1 className="header"><ra-notification [employee]="employee"></ra-notification> {{ employee.name }}</h1> 
                 <a (click)="removeEmployee()" class="delete btn btn-lg btn-outline-danger"><fa-icon [icon]="fatrash"></fa-icon> Delete</a>
-                <a class="delete btn btn-lg btn-outline-dark"><fa-icon [icon]="fatrash"></fa-icon> Edit</a>
+                <a [routerLink]="['../../edit', employee.id]" class="delete btn btn-lg btn-outline-dark"><fa-icon [icon]="fatrash"></fa-icon> Edit</a>
             </div>
             <ra-progressbar [employee]="employee"></ra-progressbar>
         </div>

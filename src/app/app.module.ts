@@ -15,6 +15,7 @@ import { EmployeeShowComponent } from './employee-show/employee-show.component';
 import { ProgressbarComponent } from './helper/progressbar/progressbar.component';
 import { NotificationComponent } from './helper/notification/notification.component';
 import { StarsComponent } from './helper/stars/stars.component';
+import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { StarsComponent } from './helper/stars/stars.component';
     ProgressbarComponent,
     NotificationComponent,
     StarsComponent,
+    EmployeeEditComponent,
   ],
   imports: [
     BrowserModule,
