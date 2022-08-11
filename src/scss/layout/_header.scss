@@ -1,0 +1,14 @@
+h1 {
+    display: inline;
+}
+.header {
+    font-size: 25px;
+}
+@media(min-width:1200px) {
+    .header {
+        font-size: 30px;
+    }
+}
+#subheader {
+    margin-bottom: 30px;
+}

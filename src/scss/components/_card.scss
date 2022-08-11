@@ -1,0 +1,14 @@
+.card {
+    margin-top: 50px;
+}
+.progress__name {
+    padding-left: 10px;
+}
+
+@media(min-width:992px) {
+    .card__progress {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+}

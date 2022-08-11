@@ -1,0 +1,27 @@
+.btn__edit  {
+	margin-right: 5px;
+}
+#grid, #sort {
+	margin-right: 5px;
+}
+@media(max-width:768px) {
+	#grid {
+		margin-right: 0px;
+	}
+	#list {
+		display:none;
+	}
+}
+.select__sorting {
+	margin-top: 10px;
+	display: inline;
+	width: 100%;
+}
+@media(min-width:1200px) {
+	.select__sorting {
+		display: inline;
+		width: 13%;
+		margin-right: 5px;
+		margin-top: 0px;
+	}
+}

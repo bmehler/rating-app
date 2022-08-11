@@ -1,4 +1,4 @@
-<select (change)="changeSorting($event)" name="sort" class="form-select form-select-sorting">
+<select (change)="changeSorting($event)" name="sort" class="float-sm-none float-lg-end form-select select__sorting">
     <option
       *ngFor="let opt of sortingOptions ;let indexOfelement=index;"
       [value]="indexOfelement + 1"
