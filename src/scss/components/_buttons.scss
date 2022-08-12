@@ -1,24 +1,27 @@
 .btn__edit  {
 	margin-right: 5px;
 }
-#grid, #sort {
+#sort {
 	margin-right: 5px;
 }
-@media(max-width:768px) {
-	#grid {
+#list {
+	@include ra-small-max {
+		display:none;
+	}
+}
+#grid {
+	@include ra-small-max {
 		margin-right: 0px;
 	}
-	#list {
-		display:none;
+	@include ra-small-min {
+		margin-right: 5px;
 	}
 }
 .select__sorting {
 	margin-top: 10px;
 	display: inline;
 	width: 100%;
-}
-@media(min-width:1200px) {
-	.select__sorting {
+	@include ra-large-min {
 		display: inline;
 		width: 13%;
 		margin-right: 5px;

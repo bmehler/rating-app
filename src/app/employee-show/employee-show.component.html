@@ -2,7 +2,8 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="progress__header">
-                <h1><ra-notification [employee]="employee"></ra-notification> <span class="progress__name float-end float-md-none float-lg-none">{{ employee.name }}</span></h1> 
+                <ra-notification [employee]="employee"></ra-notification>
+                <h1><span class="progress__name float-end float-md-none float-lg-none">{{ employee.name }}</span></h1> 
                 <a (click)="removeEmployee()" class="btn__delete float-end btn btn-outline-danger"><fa-icon [icon]="fatrash"></fa-icon> Delete</a>
                 <a [routerLink]="['../../edit', employee.id]" class="btn__edit float-end btn btn-danger"><fa-icon [icon]="fatrash"></fa-icon> Edit</a>
             </div>

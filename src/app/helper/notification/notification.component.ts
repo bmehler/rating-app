@@ -24,11 +24,11 @@ export class NotificationComponent implements OnInit {
   getClass(rating:number) {
     let classList='';
     if(rating <= 30){
-      classList = 'total-banner btn btn-lg btn-danger'; 
+      classList = 'notification__badge btn btn-lg btn-danger'; 
     }else if (rating > 30 && rating < 75){
-      classList = 'total-banner btn btn-lg btn-warning';
+      classList = 'notification__badge btn btn-lg btn-warning';
     }else if(rating > 75){
-      classList = 'total-banner btn btn-lg btn-success';
+      classList = 'notification__badge btn btn-lg btn-success';
     }
     return classList;
   }

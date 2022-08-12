@@ -2,11 +2,9 @@ h1 {
     display: inline;
 }
 .header {
-    font-size: 25px;
-}
-@media(min-width:1200px) {
-    .header {
-        font-size: 30px;
+    font-size: $font-size-normal;
+    @media(min-width: $large-screen) {
+        font-size: $font-size-large;
     }
 }
 .create__subheader {

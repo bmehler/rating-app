@@ -1,0 +1,23 @@
+@mixin ra-small-min {
+    @media screen and (min-width: $small-screen) {
+        @content;
+    }
+}
+
+@mixin ra-small-max {
+    @media screen and (max-width: $small-screen) {
+        @content;
+    }
+}
+
+@mixin ra-medium-min {
+    @media screen and (min-width: $medium-screen) {
+        @content;
+    }
+}
+
+@mixin ra-large-min {
+    @media screen and (min-width: $large-screen) {
+        @content;
+    }
+}
